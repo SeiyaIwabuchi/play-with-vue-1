@@ -16,10 +16,10 @@ export default {
   props: ["product", "events"],
   methods: {
     remove: function () {
-      this.events.remove(this.product);
+      this.$emit("remove", this.product);
     },
     edit: function () {
-      this.events.edit(this.product);
+      this.$emit("edit", this.product);
     },
   },
 };
